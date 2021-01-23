@@ -1,0 +1,26 @@
+<h1 class="text-center">Table</h1>
+
+<form #mk="ngForm" >
+
+ <input type="text" ngModel #name="ngModel" name="name"  placeholder="Name"><br><br>
+ <input type="text" ngModel #vilage="ngModel" name="vilage" placeholder="Village" ><br><br>
+
+ <input type="text" ngModel #city="ngModel" name="city"  placeholder="City"><br><br>
+<button type="submit" (click)="get(mk)">Submit</button><br><br>
+
+</form>
+
+<table border="1">
+<thead>
+  <th>Name</th>
+  <th>Village</th>
+  <th>City</th>
+</thead>
+<tbody>
+  <tr *ngFor="let item of dataArray">
+    <td>{{item.studentName}}</td>
+    <td>{{item.studentVillage}}</td>
+    <td>{{item.studentCity}}</td>
+  </tr>
+</tbody>
+</table>

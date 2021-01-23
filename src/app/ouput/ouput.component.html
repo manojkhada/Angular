@@ -1,0 +1,31 @@
+
+<form #mk="ngForm" >
+  <table style="border:2px solid black">
+    <tr >
+  <th style="border:2px solid black">name</th>
+  <th style="border:2px solid black">vilage</th>
+  <th style="border:2px solid black">city</th>
+  <th  style="border:2px solid black">submit</th>
+</tr>
+  <tr>
+ <td style="border:2px solid black"> <input type="text" ngModel #name="ngModel" name="name" ></td>
+ <td style="border:2px solid black"> <input type="text" ngModel #vilage="ngModel" name="vilage" ></td>
+
+ <td style="border:2px solid black"> <input type="text" ngModel #city="ngModel" name="city" ></td>
+  <td style="border:2px solid black"><button type="submit" (click)="get(mk)">Submit</button></td>
+</tr>
+</table>
+</form>
+
+<table>
+  <tr>
+    <th>name</th>
+    <th>vilage</th>
+    <th>city</th>
+</tr>
+<tr>
+  <td>{{Nam}}</td>
+  <td>{{vil}}</td>
+  <td>{{cit}}</td>
+</tr>
+</table>
